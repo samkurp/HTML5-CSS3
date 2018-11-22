@@ -1,0 +1,359 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+.photo {
+  width: 469px;
+  height: 214px;
+  background: black;
+}
+
+header {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  background: #445162;
+  padding: 30px;
+}
+
+.about_list {
+  list-style-image: url(img/1.png);
+  font-size: 20pt;
+  color: #fff;
+}
+
+.left-coll {
+  padding: 40px;
+}
+
+.right-coll {
+  margin: 0 auto;
+  padding: 40px 30px;
+}
+
+h1 {
+  font-size: 60pt;
+  font-weight: 500;
+  color: #fff;
+}
+
+h2 {
+  padding-bottom: 38px;
+  color: #445161;
+  font-size: 30px;
+  text-align: center;
+}
+
+section {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  color: #445161;
+}
+
+h2:first-child {
+  text-align: left;
+}
+
+.items {
+  padding: 10px 0 10px 53px;
+  flex-basis: calc(50% - 43px);
+  margin-left: -10px;
+  position: relative;
+}
+
+.pluses {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px 40px;
+  background-color: #f5f5f5;
+}
+
+.pluses h2, .screenshots h2, .reviews h2, .buy h2, .foot h2 {
+  flex-basis: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.items::before {
+  content: ' ';
+  background-image: url(img/pluse.png);
+  width: 33px;
+  height: 33px;
+  position: absolute;
+  left: 10px;
+}
+
+.screenshots {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px;
+}
+
+article, blockquote {
+  flex: 0 0 calc(50% - 200px);
+  padding-top: 20px;
+}
+
+article h3 {
+  padding: 0px 0px 10px 5px;
+}
+
+.shot {
+  background-image: url(http://promhimtech.ru/wp-content/uploads/2018/08/logo.jpg);
+  width: 200px;
+  height: 150px;
+}
+
+.reviews {
+  background: #f5f5f5;
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+blockquote {
+  flex: 0 0 calc(50% - 105px);
+  padding: 20px 10px 20px 20px;
+  box-sizing: border-box;
+  background: #ebebeb;
+  margin: 5px 10px;
+  border-radius: 7px;
+  position: relative;
+}
+
+blockquote::before {
+  content: '';
+  width: 0;
+  height: 0;
+  border: 10px solid;
+  border-color: #ebebeb;
+  position: absolute;
+  left: -10px;
+  top: 20px;
+  transform: rotate(45deg);
+}
+
+.reviewer {
+  width: 75px;
+  height: 75px;
+  border-radius: 100%;
+  background: #445161;
+}
+
+.buy {
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  -ms-align-items: flex-end;
+  align-items: flex-end;
+}
+
+.buy_item {
+  background: #445162;
+  border-radius: 5px;
+  flex: 0 0 calc((80% / 3) - 30px);
+  box-sizing: border-box;
+  margin: 15px;
+  padding: 2px;
+  justify-content: center;
+}
+
+.buy_item ol {
+  font-size: 16px;
+  color: #fff;
+  padding-left: 30px;
+  font-style: normal;
+}
+
+.buy_item p {
+  color: #445162;
+  text-align: center;
+  padding: 10px 2px;
+  background: #fff;
+  margin: 10px 0px;
+}
+
+.buy_item h3 {
+  color: #fff;
+  text-align: center;
+  font-size: 22px;
+}
+
+button {
+  text-transform: uppercase;
+  background: #fff;
+  color: #445162;
+  width: calc(100% - 40px);
+  padding: 10px;
+  margin: 20px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+footer {
+  background: #445162;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.foot h2 {
+  color: #fff;
+}
+
+form {
+  width: 250px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+input {
+
+  width: 100%;
+
+  padding: 10px 0 10px 10px ;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.range {
+  padding: 10px 0;
+}
+#button {
+  display: block;
+  font-weight: 400;
+  font-size: 15px;
+  width: 150px;
+  margin: 10px auto;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.contacts_list {
+  margin: 0 100px;
+  font-size: 13px;
+  font-weight: 100;
+  list-style-type: none;
+  color: #fff;
+}
+
+.contacts_list li:nth-child(1) {
+  background: url(img/skype-icon.png) no-repeat 0px 0px;
+  padding: 7px 0px 10px 30px;
+}
+
+.contacts_list li:nth-child(2) {
+  background: url(img/icq-icon.png) no-repeat 0px 0px;
+  padding: 7px 0px 10px 30px;
+}
+
+.contacts_list li:nth-child(3) {
+  background: url(img/email-icon.png) no-repeat 0px 0px;
+  padding: 7px 0px 10px 30px;
+}
+
+.contacts_list li:nth-child(4) {
+  background: url(img/phone-icon.png) no-repeat 0px 0px;
+  padding: 7px 0px 10px 30px;
+}
+
+.socials {
+  margin: 20px 0px 10px 100px;
+}
+
+.twitter, .facebook, .instagramm, .you_tube, .google {
+  display: inline-block;
+  width: 43px;
+  height: 43px;
+  margin: 0 20px 0px 0;
+  border-radius: 100%;
+}
+
+.twitter {
+  background: url(img/social-buttons.png) 0 0 no-repeat;
+}
+
+.facebook {
+  background: url(img/social-buttons.png) -49px 0 no-repeat;
+}
+
+.instagramm {
+  background: url(img/social-buttons.png) -98px 0 no-repeat;
+}
+
+.google {
+  background: url(img/social-buttons.png) -147px 0 no-repeat;
+}
+
+.you_tube {
+  background: url(img/social-buttons.png) -196px 0 no-repeat;
+}
+
+.copyright {
+  flex-basis: 100%;
+  text-align: center;
+  color: #656f7b;
+  padding: 10px;
+  margin: 20px auto 0;
+  background: #fff;
+}
+
+form ul{
+  color: #fff;
+  list-style-type: none;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+}
+form li:nth-child(2){
+  margin-left: -20px;
+}
+form input:required{
+	background-color: lightyellow;
+}
+.range{
+  outline: none;
+  height: 5px;
+  padding: 0;
+  margin: 10px 0;
+  -webkit-appearance: none;
+  border: 1px solid #656f7b;
+
+}
+.range::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  background: #ebebeb;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  -webkit-box-shadow: 3px 3px 3px black;
+  box-shadow: 0 0 20px #fff;
+}
+input{
+  outline: none;
+}
+input:valid{
+  -webkit-box-shadow: inset 0 0 10px green;
+  box-shadow: inset 0 0 10px green;
+}
+input:invalid{
+  -webkit-box-shadow: inset 0 0 10px red;
+  box-shadow: inset 0 0 10px red;
+}
