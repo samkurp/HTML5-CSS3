@@ -1,0 +1,22 @@
+@font-face{
+
+font-family: 'Lato_Black';
+
+src: url('fonts/Lato-Black.ttf'),
+
+url('/fonts/Lato-Black.ttf') format('truetype');
+
+font-weight: normal;
+
+font-style: normal;
+
+
+font-family: 'LemonMilk';
+
+src: url('fonts/lemonMilk.otf');
+
+font-weight: normal;
+
+font-style: normal;
+
+}
