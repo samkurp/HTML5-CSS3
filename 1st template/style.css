@@ -9,13 +9,15 @@ main{
 body {
   font-family: 'Raleway', sans-serif;
   max-width: 1600px;
+  min-width: 360px;
   width: 100%;
-  margin: 0 auto;
+
 }
 .container{
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  min-width: 360px;
 }
 
 .photo {
@@ -51,7 +53,7 @@ header {
   display: -ms-flex;
   display: flex;
   flex-wrap: wrap;
-  width: 50%;
+  flex: 0 0 calc(100% / 2);
   padding: 40px;
   box-sizing: border-box;
 }
@@ -62,9 +64,15 @@ header {
   display: flex;
   margin: 0 auto;
   padding: 40px 30px;
-  width: 50%;
+  flex: 0 0 calc(100% / 2);
   box-sizing: border-box;
   align-items: flex-start;
+}
+video{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex: 0 0 (100% / 2);
 }
 
 h1 {
@@ -87,6 +95,9 @@ section {
   display: flex;
   justify-content: space-between;
   color: #445161;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 h2:first-child {
@@ -94,10 +105,10 @@ h2:first-child {
 }
 
 .items {
-  padding: 10px 0 10px 53px;
-  flex-basis: calc(50% - 43px);
-  margin-left: -10px;
+  padding: 20px 0 0px 50px;
+  flex-basis: 50%;
   position: relative;
+  box-sizing: border-box;
 }
 
 .pluses {
@@ -132,9 +143,10 @@ h2:first-child {
   padding: 40px;
 }
 
-article, blockquote {
+article{
   flex: 0 0 calc(50% - 200px);
   padding-top: 20px;
+  box-sizing: border-box;
 }
 
 article h3 {
@@ -184,19 +196,22 @@ blockquote::before {
 }
 
 .buy {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   margin: 20px 0;
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   -ms-align-items: flex-end;
   align-items: flex-end;
+  box-sizing: border-box;
 }
 
 .buy_item {
   background: #445162;
   border-radius: 5px;
-  flex: 0 0 30%;
+  flex: 0 0 calc(90% / 3);
   box-sizing: border-box;
   margin: 15px;
   padding: 2px;
@@ -275,9 +290,19 @@ input {
   box-sizing: border-box;
   border-radius: 5px;
 }
+.contacts{
+  margin: 30px 0;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
 
 .contacts_list {
-  margin: 0 100px;
+
+  margin: 0 auto;
   font-size: 13px;
   font-weight: 100;
   list-style-type: none;
@@ -305,9 +330,22 @@ input {
 }
 
 .socials {
-  margin: 20px 0px 10px 100px;
+  margin: 20px auto;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  -webkit-flex: 0 0 100%;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
 }
-
+.socials i{
+  font-size: 30px;
+  color: #fff;
+}
+.socials a{
+  margin: 10px;
+}
 .twitter, .facebook, .instagramm, .you_tube, .google {
   display: inline-block;
   width: 43px;
@@ -389,4 +427,79 @@ input:valid{
 input:invalid{
   -webkit-box-shadow: inset 0 0 10px red;
   box-shadow: inset 0 0 10px red;
+}
+@media (max-width: 900px) {
+  .buy_item{
+    -webkit-flex: 0 0 40%;
+    -ms-flex: 0 0 40%;
+    flex: 0 0 40%;
+    justify-content: center;
+  }
+
+}
+@media (max-width: 806px) {
+  .left-coll{
+    flex: 0 0 100%;
+    justify-content: center;
+  }
+  .right-coll{
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    justify-content: center;
+  }
+  .items{
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+  }
+  article{
+    -webkit-flex: 0 0 calc(100% - 200px);
+    -ms-flex: 0 0 calc(100% - 200px);
+    flex: 0 0 calc(100% - 200px);
+  }
+  blockquote{
+    -webkit-flex: 0 0 calc(100% - 105px);
+    -ms-flex: 0 0 calc(100% - 105px);
+    flex: 0 0 calc(100% - 105px);
+  }
+  .buy_item{
+    -webkit-flex: 0 0 70%;
+    -ms-flex: 0 0 70%;
+    flex: 0 0 70%;
+    justify-content: center;
+  }
+}
+@media (max-width: 426px) {
+  .buy_item{
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+  }
+  blockquote::before{
+    top: -10px;
+    left: calc(50% - 10px);
+  }
+  .shot, .reviewer{
+    margin: 20px auto;
+  }
+  article{
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  blockquote{
+
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+
+  }
+
 }

@@ -1,0 +1,131 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.container{
+  max-width: 1600px;
+  width: 100%;
+  background-image: url(bg.jpg);
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: 0 -300px;
+  height: 1200px;
+}
+header{
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+.header_top{
+  padding-top: 20px;
+  width: 100%;
+  height: 84px;
+
+
+}
+.logo{
+  display: block;
+  background-image: url(logo.png);
+  background-repeat: no-repeat;
+  width: 294px;
+  height: 84px;
+  float: left;
+
+}
+nav{
+  padding-top: 60px;
+  display: block;
+}
+nav ul{
+  display: block;
+  text-align: right;
+}
+nav li{
+  display: inline;
+  cursor: pointer;
+}
+header a{
+  font-family: bebasneuebold;
+  font-size: 23.68px;
+  padding: 0 15px 15px 15px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  display: inline-block;
+}
+.header_bottom{
+  width: 100%;
+  margin: 170px 0 195px 0;
+}
+header a:hover{
+  border-bottom: 3px solid #fff;
+}
+.header_bottom h1{
+  font-family: bebasneuebold;
+  font-size: 95.41px;
+  color: #fff;
+  text-align: left;
+  padding-bottom: 50px;
+}
+span {
+  color: #d25b38;
+}
+.header_bottom p{
+  font-family: opensansitalic;
+  font-size: 25px;
+  color: #fff;
+  padding-bottom: 66px;
+}
+.btn{
+  background-color: #d25b38;
+  width: 180px;
+  height: 55px;
+  margin: 0 24px 0 0;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-family: bebasneuebold;
+  color: #fff;
+  border: none;
+  padding-top: 3px;
+  letter-spacing: 2px;
+}
+.btn:hover{
+  background: transparent;
+  border: 4px solid #fff;
+}
+main{
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.left_col{
+  width: 30%;
+  background: #fff;
+  display: block;
+  float: left;
+}
+section h2{
+  padding: 95px 0 30px 0;
+  font-size: 87.05px;
+  font-family: bebasneuebold;
+  color: #454443;
+}
+section p{
+  overflow: hidden;
+  font-size: 16px;
+  font-family: opensans;
+  color: #636363;
+}
+.right_col{
+  float: left;
+  background: url(about_us.jpg);
+  width: 70%;
+  height: 769px;
+  background-repeat: no-repeat;
+
+}
