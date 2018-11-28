@@ -52,7 +52,7 @@ nav li{
   display: inline;
   cursor: pointer;
 }
-header a{
+nav a{
   font-family: bebasneuebold;
   font-size: 23.68px;
   padding: 0 15px 15px 15px;
@@ -89,7 +89,7 @@ span {
   background-color: #d25b38;
   width: 180px;
   height: 55px;
-  margin: 0 24px 0 0;
+  margin: 10px 24px 0 0;
   text-transform: uppercase;
   font-size: 20px;
   font-family: bebasneuebold;
@@ -203,22 +203,140 @@ section p{
   padding: 20px 0;
   text-transform: uppercase;
 }
+.news{
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 100%;
+}
+.right_coll_news{
+  margin: 10px 20px;
+  grid-row-gap: 28px;
+  grid-column-gap: 5px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+.left_coll_news{
+  display: grid;
+  align-items: end;
+}
+.news_items_big{
+  padding: 20px;
+  display: grid;
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  background-image: url(news_item4.jpg);
+  align-items: end;
+  color: #fff;
+}
+.news_items_big h3{
+  display: inline;
+  font-family: bebasneuebold;
+  font-size: 25px;
+  text-align: center;
+}
+.news_items_big p{
+  display: inline;
+  color: #fff;
+}
+.news_items{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.news_items h3{
+  text-align: left;
+  color: #454443;
+  font-size: 25px;
+  font-family: bebasneuebold;
+}
+.news_items{
+  font-family: opensans;
+  font-size: 15px;
+  text-align: left;
+}
+.team{
+  margin: 20px auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: auto;
+  margin: 0 auto;
+}
+.left_coll_team{
+  align-self: end;
+}
+.left_coll_team h2{
+  padding: 0;
+}
+.right_coll_team{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 28px;
+}
+.team_items{
+  text-align: center;
+}
+.team_items h3{
+  padding-top: 30px;
+  font-family: bebasneuebold;
+  font-size: 39.52px;
+  color: #454443;
+  text-transform: uppercase;
+}
+.team_items h4{
+  font-family: bebasneuebold;
+  text-transform: uppercase;
+  font-size: 25px;
+}
+.team_items p{
+  padding-bottom: 30px;
+}
+
+
+
+
+
+
+@media (max-width: 1192px) {
+  .team{
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding-top: 30px;
+  }
+  .news_items_big{
+    display: none;
+  }
+  .right_coll_news{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+}
 @media (max-width: 1074px) {
+  .news{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+  }
+  .news_items{
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 28px;
+  }
   section{
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 769px;
   }
   section h2{
-    text-align: left;
+    text-align: center;
     display: block;
-    float: left;
-    margin-right: 20px;
   }
   section p{
-    text-align: center;
-    margin-top: 50px;
+    text-align: justify;
+    margin-top: 0;
   }
   .about_item{
+    margin-bottom: 15px;
     padding-bottom: 0;
     text-align: left;
   }
@@ -231,15 +349,28 @@ section p{
     text-align: center;
   }
 }
-@media (max-width: 866px) {
-  .about_desctiption{
-  margin-top: -80px;
-  }
-}
+
 @media (max-width: 742px) {
-  .about_item{
+
+  .news{
+    grid-template-columns: 1fr;
+    grid-template-rows: 300px 1fr;
+    justify-items: center;
+  }
+  .right_coll_news{
+    justify-content: center;
+  }
+  .news_items{
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
+  }
+  .header_bottom h1{
+    font-size: 50px;
+  }
+  .about_item{
+    padding-top: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
   }
   .about_item h3, .about_item p{
     color: #636363;
@@ -251,6 +382,7 @@ section p{
     background-color: #fff;
     background-image: none;
     color: #636363;
+    margin: 20px;
   }
   .right_coll{
     grid-template-columns: 1fr 1fr;
@@ -264,5 +396,29 @@ section p{
   }
   .about_desctiption{
     margin: 0;
+  }
+  section{
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 2fr;
+  }
+}
+@media (max-width: 450px) {
+  .right_coll{
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+  .logo{
+    display: none;
+  }
+  .services{
+    grid-template-columns: 100%;
+    grid-template-rows: 300px 1fr;
+  }
+  nav a{
+    font-size: 15px;
+    padding: 5px;
+  }
+  nav ul{
+    text-align: center;
   }
 }
