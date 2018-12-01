@@ -11,8 +11,10 @@
   background-position: 0 -300px;
 }
 .container_grey, .container_white{
+  padding: 20px 0;
   margin: 0 auto;
   width: 100%;
+  max-width: 1600px;
 }
 .container_grey{
   background-color: #f4f2f2;
@@ -116,11 +118,12 @@ section{
   padding: 10px;
   background: #fff;
 }
-section h2{
+h2{
   padding: 0 0 10px 0;
   font-size: 87.05px;
   font-family: bebasneuebold;
   color: #454443;
+  font-weight: 900;
 }
 section p{
   font-size: 16px;
@@ -205,6 +208,8 @@ section p{
   text-transform: uppercase;
 }
 .news{
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 3fr;
@@ -246,6 +251,7 @@ section p{
 .news_items{
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-gap: 28px;
 }
 .news_items h3{
   text-align: left;
@@ -259,12 +265,12 @@ section p{
   text-align: left;
 }
 .team{
+  max-width: 1200px;
   margin: 20px auto;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-template-rows: auto;
-  margin: 0 auto;
 }
 .left_coll_team{
   align-self: end;
@@ -273,9 +279,11 @@ section p{
   padding: 0;
 }
 .right_coll_team{
+  margin: 0 20px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 28px;
+  justify-content: center;
 }
 .team_items{
   text-align: center;
@@ -295,17 +303,142 @@ section p{
 .team_items p{
   padding-bottom: 30px;
 }
+.team_img img:last-child{
+  display: none;
+}
+.portfolio_item1{
+  grid-area: letter;
+}
+.portfolio_item2{
+  grid-area: newspapers;
+}
+.portfolio_item3{
+  grid-area: beer;
+}
+.portfolio_text{
+  grid-area: texts;
+}
+.portfolio_item4{
+  grid-area: post;
+}
+.portfolio_item5{
+  grid-area: coffee;
+}
+.portfolio_item6{
+  grid-area: bag;
+}
+.portfolio{
+  justify-content: center;
+  max-width: 1600px;
+  width: 100%;
+  grid-gap: 0px;
+  margin: 0 auto;
+  grid-template-columns: repeat(4, autofill);
+  grid-template-rows: repeat(3, 264px);
+  display: grid;
+  grid-template-areas:
+    "letter letter newspapers newspapers"
+    "beer texts post bag"
+    "beer texts coffee bag";
+}
+.portfolio_text{
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+.portfolio:not(h2){
+  overflow: hidden;
+}
 
 
+.bottom_footer{
+  float: none;
+}
+.wrpd{
+  width: 100%;
+  background: url(img/bg_footer.jpg)no-repeat calc(100% / 2 + 750px) center;
+
+}
+footer{
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+}
+
+footer li{
+  font-size: 30px;
+  font-family: bebasneuebold;
+  text-transform: uppercase;
+  color: #d25b38;
+  list-style-type: none;
+  font-style: normal;
+  margin: 50px 0 0 165px;
+  display: block;
+}
+footer li p{
+  font-family: opensans;
+  font-size: 16px;
+  color: #666564;
+  text-transform: none;
+}
+.li_address::before{
+  content: " ";
+  width: 62px;
+  height: 64px;
+  background: url(img/map_icon.png) no-repeat center;
+  display: block;
+  float: left;
+  margin: -25px 0 0 -100px;
+}
+.li_phone::before{
+  content: " ";
+  width: 62px;
+  height: 64px;
+  background: url(img/phone_icon.png) no-repeat center;
+  display: block;
+  float: left;
+  margin: -25px 0 0 -100px;
+}
+.li_email::before{
+  content: " ";
+  width: 62px;
+  height: 64px;
+  background: url(img/letter_icon.png) no-repeat center;
+  display: block;
+  float: left;
+  margin: -25px 0 0 -100px;
+}
+.li_website::before{
+  content: " ";
+  width: 62px;
+  height: 64px;
+  background: url(img/monitor_icon.png) no-repeat center;
+  display: block;
+  float: left;
+  margin: -25px 0 0 -100px;
+}
+@media (max-width: 1400px) {
+  .portfolio{
+    grid-template-columns: repeat(2, 399px);
+    grid-template-rows: repeat(5, 264px);
+    display: grid;
+    grid-template-areas:
+      "letter letter"
+      "beer texts"
+      "beer texts"
+      "coffee bag"
+      "post bag"
+      "newspapers newspapers";
+  }
 
 
-
-
+}
 @media (max-width: 1192px) {
   .team{
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     padding-top: 30px;
+    justify-items: center;
   }
   .news_items_big{
     display: none;
@@ -316,6 +449,20 @@ section p{
   }
 }
 @media (max-width: 1074px) {
+  .right_coll_team{
+    grid-template-columns: 1fr;
+  }
+  .team_items{
+    grid-template-columns: 1fr;
+  }
+  .team_img img:last-child{
+    display: block;
+    float: left;
+    margin-right: 10px;
+  }
+  .team_img img:first-child{
+    display: none;
+  }
   .news{
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 2fr;
@@ -352,6 +499,24 @@ section p{
 }
 
 @media (max-width: 742px) {
+  .wrpd{
+    background: transparent;
+  }
+  .portfolio{
+    grid-template-areas:
+      "texts texts"
+      "letter letter"
+      "bag beer"
+      "bag beer"
+      "post coffee"
+      "newspapers newspapers";
+  }
+
+  .team_img img:last-child{
+    float: none;
+    width: 50%;
+    margin: 0 auto;
+  }
 
   .news{
     grid-template-columns: 1fr;
@@ -404,6 +569,7 @@ section p{
   }
 }
 @media (max-width: 450px) {
+
   .right_coll{
     grid-template-columns: 100%;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
