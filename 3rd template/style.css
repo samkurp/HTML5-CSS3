@@ -287,6 +287,15 @@ section p{
 }
 .team_items{
   text-align: center;
+  -webkit-transition: box-shadow 0.25s;
+  -o-transition: box-shadow 0.25s;
+  transition: box-shadow 0.25s;
+}
+.team_items:hover{
+  -webkit-box-shadow:  0 0 25px grey;
+  box-shadow:  0 0 25px grey;
+  border-radius: 10px;
+
 }
 .team_items h3{
   padding-top: 30px;
@@ -302,6 +311,9 @@ section p{
 }
 .team_items p{
   padding-bottom: 30px;
+}
+.team_img {
+  padding: 10px 0;
 }
 .team_img img:last-child{
   display: none;
